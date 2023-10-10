@@ -2,7 +2,7 @@
 With the rise of ChatGPT, word is the new coding skill.
 I created Bomberman using Python and ChatGPT.
 
-Tools and Resources:
+Tools and Resources
 	PyCharm - Coding
  	ChatGPT - Coding and guide
   	
