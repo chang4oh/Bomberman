@@ -1,0 +1,223 @@
+import pygame
+import sys
+import random
+
+# Initialize Pygame
+pygame.init()
+
+# Set up the game window
+WIDTH, HEIGHT = 800, 600
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Bomberman Game")
+
+# Set the background color to dark green
+BACKGROUND_COLOR = (0, 100, 0)
+
+# Load game assets (graphics, sounds, music)
+player_image = pygame.image.load("player.png")
+enemy_image = pygame.image.load("enemy.png")
+wall_image = pygame.image.load("wall.png")
+bomb_image = pygame.image.load("bomb.png")
+# Load sounds and music here
+
+# Define game entities (player, enemies, walls, bombs, power-ups)
+player = pygame.Rect(50, 50, player_image.get_width(), player_image.get_height())
+enemies = [pygame.Rect(200, 200, enemy_image.get_width(), enemy_image.get_height()),
+           pygame.Rect(400, 300, enemy_image.get_width(), enemy_image.get_height())]
+walls = []  # Define maze walls
+for i in range(20):
+    wall = pygame.Rect(random.randint(0, WIDTH - wall_image.get_width()),
+                       random.randint(0, HEIGHT - wall_image.get_height()),
+                       wall_image.get_width(),
+                       wall_image.get_height())
+    walls.append(wall)
+bombs = []  # Stores active bombs with their position and timer
+# Define power-up variables and logic here
+
+# Game variables
+score = 0
+game_over = False
+PLAYER_SPEED = 5  # Adjust the player's speed as needed
+
+# Bomb variables
+BOMB_TIMER = 3000  # 3 seconds in milliseconds (adjust as needed)
+bomb_timer = BOMB_TIMER
+BOMB_COOLDOWN = 1000  # 1-second cooldown between bombs (adjust as needed)
+can_drop_bomb = True
+
+# Define a font for UI text
+font = pygame.font.Font(None, 36)
+
+# Define enemy movement directions (up, down, left, right)
+enemy_directions = [(0, -1), (0, 1), (-1, 0), (1, 0)]
+
+# Explosion class to handle bomb explosions and animation
+class Explosion:
+    def __init__(self, x, y, explosion_duration):
+        self.x = x
+        self.y = y
+        self.explosion_duration = explosion_duration
+        self.current_frame = 0
+        self.explosion_images = [
+            pygame.image.load("explosion_frame1.png"),
+            pygame.image.load("explosion_frame2.png"),
+            pygame.image.load("explosion_frame3.png"),
+            # Add more frames as needed
+        ]
+
+    def update(self):
+        self.current_frame += 1
+
+    def draw(self, screen, camera_x, camera_y):
+        if self.current_frame < len(self.explosion_images):
+            screen.blit(self.explosion_images[self.current_frame],
+                        (self.x - camera_x, self.y - camera_y))
+
+explosions = []
+
+# Define a function to handle bomb explosions
+def handle_bomb_explosions():
+    global explosions
+    exploded_bombs = []
+    for bomb in bombs:
+        if bomb_timer <= 0:
+            exploded_bombs.append(bomb)
+            explosions.append(Explosion(bomb.x, bomb.y, 3))  # 3 frames of explosion animation
+    for bomb in exploded_bombs:
+        bombs.remove(bomb)
+
+# Game Loop
+while True:
+    # Clear the screen with the background color at the beginning of each frame
+    screen.fill(BACKGROUND_COLOR)
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE and can_drop_bomb:
+            # Drop a bomb when the spacebar is pressed and the cooldown allows it
+            bomb = pygame.Rect(player.x, player.y, bomb_image.get_width(), bomb_image.get_height())
+            bombs.append(bomb)
+            bomb_timer = BOMB_TIMER
+            can_drop_bomb = False
+
+    if not game_over:
+        # Handle player input
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_LEFT] or keys[pygame.K_a]:
+            # Calculate the potential new position
+            new_x = player.x - PLAYER_SPEED
+            # Check if the new position is within the left boundary
+            if new_x >= 0:
+                # Check for collisions with walls before moving
+                temp_player = player.copy()
+                temp_player.x = new_x
+                collision_with_wall = any(wall.colliderect(temp_player) for wall in walls)
+                if not collision_with_wall:
+                    player.x = new_x
+
+        if keys[pygame.K_RIGHT] or keys[pygame.K_d]:
+            # Calculate the potential new position
+            new_x = player.x + PLAYER_SPEED
+            # Check if the new position is within the right boundary
+            if new_x <= WIDTH - player.width:
+                # Check for collisions with walls before moving
+                temp_player = player.copy()
+                temp_player.x = new_x
+                collision_with_wall = any(wall.colliderect(temp_player) for wall in walls)
+                if not collision_with_wall:
+                    player.x = new_x
+
+        if keys[pygame.K_UP] or keys[pygame.K_w]:
+            # Calculate the potential new position
+            new_y = player.y - PLAYER_SPEED
+            # Check if the new position is within the top boundary
+            if new_y >= 0:
+                # Check for collisions with walls before moving
+                temp_player = player.copy()
+                temp_player.y = new_y
+                collision_with_wall = any(wall.colliderect(temp_player) for wall in walls)
+                if not collision_with_wall:
+                    player.y = new_y
+
+        if keys[pygame.K_DOWN] or keys[pygame.K_s]:
+            # Calculate the potential new position
+            new_y = player.y + PLAYER_SPEED
+            # Check if the new position is within the bottom boundary
+            if new_y <= HEIGHT - player.height:
+                # Check for collisions with walls before moving
+                temp_player = player.copy()
+                temp_player.y = new_y
+                collision_with_wall = any(wall.colliderect(temp_player) for wall in walls)
+                if not collision_with_wall:
+                    player.y = new_y
+
+        # Update game logic (collision detection, enemy AI, bomb mechanics, power-ups, scoring, level progression)
+        # Move the enemies randomly
+        for enemy in enemies:
+            dx, dy = random.choice(enemy_directions)
+            new_x = max(0, min(WIDTH - enemy.width, enemy.x + dx * PLAYER_SPEED))
+            new_y = max(0, min(HEIGHT - enemy.height, enemy.y + dy * PLAYER_SPEED))
+            if not any(wall.colliderect(pygame.Rect(new_x, new_y, enemy.width, enemy.height)) for wall in walls):
+                enemy.x, enemy.y = new_x, new_y
+
+        # Check for game over condition (e.g., player collides with an enemy)
+        for enemy in enemies:
+            if player.colliderect(enemy):
+                game_over = True  # Player collision with enemy results in game over
+
+        # Update bomb timer and check for bomb explosion
+        if bomb_timer > 0:
+            bomb_timer -= 50  # Reduce timer by 50 milliseconds per frame
+        else:
+            # Handle bomb explosions
+            handle_bomb_explosions()
+
+        # Move the camera (screen) to follow the player
+        camera_x = max(0, player.x - WIDTH // 2)
+        camera_y = max(0, player.y - HEIGHT // 2)
+        camera_x = min(camera_x, max(0, WIDTH - WIDTH // 2))
+        camera_y = min(camera_y, max(0, HEIGHT - HEIGHT // 2))
+
+        # Draw game elements (player, enemies, walls, bombs, power-ups)
+        screen.blit(player_image, (player.x - camera_x, player.y - camera_y))
+        for enemy in enemies:
+            screen.blit(enemy_image, (enemy.x - camera_x, enemy.y - camera_y))
+        for wall in walls:
+            screen.blit(wall_image, (wall.x - camera_x, wall.y - camera_y))
+        for bomb in bombs:
+            screen.blit(bomb_image, (bomb.x - camera_x, bomb.y - camera_y))
+        # Draw explosions
+        for explosion in explosions:
+            explosion.update()
+            explosion.draw(screen, camera_x, camera_y)
+            if explosion.current_frame >= len(explosion.explosion_images):
+                explosions.remove(explosion)
+
+        # Draw power-ups and other game elements here
+
+        # Draw the score
+        score_text = font.render(f"Score: {score}", True, (255, 255, 255))
+        screen.blit(score_text, (10, 10))
+
+        # Update the display
+        pygame.display.flip()
+
+        # Control the frame rate
+        pygame.time.delay(50)  # Adjust frame rate as needed
+
+    else:
+        # Display game over screen
+        game_over_text = font.render("Game Over", True, (255, 0, 0))
+        screen.blit(game_over_text, (WIDTH // 2 - 100, HEIGHT // 2 - 50))
+
+        # Display final score
+        final_score_text = font.render(f"Final Score: {score}", True, (255, 255, 255))
+        screen.blit(final_score_text, (WIDTH // 2 - 100, HEIGHT // 2 + 20))  # Adjust the position as needed
+
+        # Update the display
+        pygame.display.flip()
+
+        # Control the frame rate
+        pygame.time.delay(50)  # Adjust frame rate as needed
