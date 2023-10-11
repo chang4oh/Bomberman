@@ -30,16 +30,13 @@ ChangeLogs
 <br />      Menu Screen added with four button (Start Game) (Options) (Credits) (Quit)
 <br />      Quit button function added
 <br />      Menu screen music added
+<br />      Note: adding menu screen and connecting to start game is very difficult process
+<br />
+<br />Version 1.3: (future)
 <br />      Retry button and Home button added in game lose screen 
 <br />      Start button function added
 <br />      Credits button function added
 <br />      Options button funciton added
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
 <br />
 <br />
 <br />
