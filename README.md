@@ -34,6 +34,8 @@ ChangeLogs
 <br />      Note: adding menu screen and connecting to start game is very difficult process
 <br />      Everything is rendered now, adjusted every objects (another difficult process)
 <br />      Start button function added
+<br />      Automatic leveling, and scoring 
+<br />
 <br />
 <br />Version 1.3: (future)
 <br />      Retry button and Home button added in game lose screen 
