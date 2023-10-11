@@ -19,11 +19,11 @@ ChangeLogs
 <br />      Player (Bomberman sprite) with control and screen follow the player . 
 <br />      Random Enemy spawn (Ghost sprite) with random movement. Player removed upon collision AKA lose game.
 <br />      Random Wall spawn (Wall sprite) with collision
-<br />
+<br />      Process: https://chat.openai.com/share/837969f0-6921-43fb-b280-05acc8bd1918
 <br />Version 1.1:
 <br />      Player now be able to drop one bomb at a time (not an easy task)
 <br />      Bomb will remove enemy after exploding in close proximity
-<br />
+<br />      Process: https://chat.openai.com/share/837969f0-6921-43fb-b280-05acc8bd1918
 <br />Version 1.2: 
 <br />      Game background music added
 <br />      Bomb explosion sound added
@@ -35,8 +35,8 @@ ChangeLogs
 <br />      Everything is rendered now, adjusted every objects (another difficult process)
 <br />      Start button function added
 <br />      Automatic leveling, and scoring 
-<br />
-<br />
+<br />      Process: https://chat.openai.com/share/837969f0-6921-43fb-b280-05acc8bd1918
+<br />      Process: https://chat.openai.com/share/6fa990e8-069e-4c92-b570-d19b361867e9
 <br />Version 1.3: (future)
 <br />      Retry button and Home button added in game lose screen 
 <br />      Credits button function added
