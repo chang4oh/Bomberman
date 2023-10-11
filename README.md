@@ -33,10 +33,10 @@ ChangeLogs
 <br />      Start button function added
 <br />      Note: adding menu screen and connecting to start game is very difficult process
 <br />      Everything is rendered now, adjusted every objects (another difficult process)
+<br />      Start button function added
 <br />
 <br />Version 1.3: (future)
 <br />      Retry button and Home button added in game lose screen 
-<br />      Start button function added
 <br />      Credits button function added
 <br />      Options button funciton added
 <br />
