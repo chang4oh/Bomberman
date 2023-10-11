@@ -27,13 +27,24 @@ ChangeLogs
 <br />Version 1.2: 
 <br />      Game background music added
 <br />      Bomb explosion sound added
-<br />      Menu Screen added with four button (Start) (Options) (Credits) (Quit)
+<br />      Menu Screen added with four button (Start Game) (Options) (Credits) (Quit)
 <br />      Quit button function added
-<br />      Start button function added
-<br />      Credits button function added
-<br />      OPtions button funciton added
 <br />      Menu screen music added
 <br />      Retry button and Home button added in game lose screen 
+<br />      Start button function added
+<br />      Credits button function added
+<br />      Options button funciton added
 <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
 
 
