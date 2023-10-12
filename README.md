@@ -37,10 +37,9 @@ ChangeLogs
 <br />      Automatic leveling, and scoring 
 <br />      Process: https://chat.openai.com/share/837969f0-6921-43fb-b280-05acc8bd1918
 <br />      Process: https://chat.openai.com/share/6fa990e8-069e-4c92-b570-d19b361867e9
-<br />Version 1.3: (future)
-<br />      Retry button and Home button added in game lose screen 
+<br />Version 1.3: 
 <br />      Credits button function added
-<br />      Options button funciton added
+<br />      Options button funciton added (Music On/Off, Difficulty Normal/Hard, Change Skin)
 <br />
 <br />
 <br />
