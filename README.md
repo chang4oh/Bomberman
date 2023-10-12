@@ -40,8 +40,8 @@ ChangeLogs
 <br />Version 1.3: 
 <br />      Credits button function added
 <br />      Options button funciton added (Music On/Off, Difficulty Normal/Hard, Change Skin)
-<br />
-<br />
+<br />      Multiple error fixes including screen transition between menu and buttons
+<br />      Process:  https://chat.openai.com/share/6fa990e8-069e-4c92-b570-d19b361867e9
 <br />
 <br />
 <br />
