@@ -1,6 +1,13 @@
 # Bomberman
-<br />With the rise of ChatGPT, word is the new coding skill.
-<br />I created Bomberman using Python and ChatGPT.
+<br />Bomberman is a classic video game franchise that was first introduced by Hudson Soft (now part of Konami) in the 1980s. The game series is known for its action-packed gameplay and maze-like levels where players control a character who must strategically place bombs to defeat enemies and solve puzzles.
+
+The basic premise of the game involves a character named Bomberman, who navigates through grid-based levels, trying to eliminate enemies by strategically placing and detonating bombs while avoiding being caught in the blast radius of their own bombs. The game typically features both single-player and multiplayer modes, making it a popular choice for multiplayer gaming.
+
+Bomberman has seen numerous iterations and adaptations across various gaming platforms, including the NES, Super Nintendo, and modern consoles. It has become a beloved and enduring franchise in the gaming world and has been released in various forms, including 2D and 3D versions, as well as spin-off titles.
+
+The multiplayer aspect of Bomberman is particularly well-known, as it allows for exciting and competitive gameplay, with players trying to outwit and outmaneuver their opponents while avoiding the destructive power of the bombs.
+
+Bomberman has also made appearances in various crossover games and has a strong presence in the gaming community. It remains a favorite among gamers for its classic, addictive gameplay and has contributed significantly to the history of video games.
 
 Tools and Resources
 <br />      PyCharm - Coding
