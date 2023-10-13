@@ -42,17 +42,18 @@ ChangeLogs
 <br />      Options button funciton added (Music On/Off, Difficulty Normal/Hard, Change Skin)
 <br />      Multiple error fixes including screen transition between menu and buttons
 <br />      Process:  https://chat.openai.com/share/6fa990e8-069e-4c92-b570-d19b361867e9
-<br />Version 1.4:
+<br />      https://chat.openai.com/share/6fa990e8-069e-4c92-b570-d19b361867e9
+<br />      Note: With just near 500 lines code on version 1.3, using ChatGPT is difficult
+<br />      Will need backup because game will not work especially when requesting 
+<br />      multiple changes at the same time.
+<br />Version 1.4: (future)
 <br />      Fixed skin change not changing skin
 <br />      Added menu image, background image
-<br />         
-<br />   
-<br />   
-<br />   
-<br />   
-<br />   
-<br />   
-<br />   
+<br />      Wall boundary added   
+<br />      Enemy can't go past wall now
+<br />      In End Menu, Retry and Menu button added
+<br />      Added ESC in-game to have Retry and Menu button just like End Menu
+<br />      
 <br />   
 <br />   
 <br />   
