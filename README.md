@@ -35,7 +35,15 @@ Tools and Resources
 <br />      Link:  https://downloads.khinsider.com/game-soundtracks/album/bomberman-turbografx-16-1990
 <br />      Bomb Explosion Sound - 
 <br />      Link:  https://www.101soundboards.com/boards/44154-sound-effects-super-bomberman-2-miscellaneous-snes
-
+<br />
+<br />      HOW TO PLAY:
+<br />      CONTROLS  Arrow keys (character movement, choice selection)
+<br />                ENTER (select)
+<br />                ESC (current menu such as Menu screen, end screen, level screen)
+<br />                SPACE (drop bomb, 1 bomb per second)
+<br />                *There is no mouse click involved
+<br />
+<br />
 ChangeLogs
 <br />Version 1.0: 
 <br />      Bomb (Bomb sprite) explode and with short animation. 
@@ -77,7 +85,7 @@ ChangeLogs
 <br />      Enemy will no longer go through the wall and screen boundary
 <br />      End Menu [Retry] and [Menu] buttons added with appropriate function
 <br />      Now able to click ESC during each level, showing pause screen with [Retry] and [Menu] buttons
-<br />      
+<br />      Fixed end game screen screen flickers when any button is selected 
 <br />      Process:
 <br />   
 <br />   
