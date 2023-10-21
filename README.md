@@ -25,7 +25,7 @@
 <br />
 <br />
 <br />
-Tools and Resources
+<br /> Tools and Resources
 <br />      PyCharm - Coding
 <br />      ChatGPT - Coding and guide
 <br />      iCon8 - Sprites
@@ -35,6 +35,10 @@ Tools and Resources
 <br />      Link:  https://downloads.khinsider.com/game-soundtracks/album/bomberman-turbografx-16-1990
 <br />      Bomb Explosion Sound - 
 <br />      Link:  https://www.101soundboards.com/boards/44154-sound-effects-super-bomberman-2-miscellaneous-snes
+<br />
+<br />      TO PLAY, download dist (is the latest version)
+<br />      Click the main.exe and the software will automatically work
+<br />      Will need Python IDE downloaded
 <br />
 <br />      HOW TO PLAY:
 <br />      CONTROLS  Arrow keys (character movement, choice selection)
@@ -81,7 +85,10 @@ ChangeLogs
 <br />      Added theme menu image  
 <br />      End Menu [Retry] and [Menu] buttons added with appropriate function
 <br />      Fixed end game screen screen flickers when any button is selected 
-<br />      Process:
+<br />      *Added exe. file inside dist for easy access to game play
+<br />      Keyword for creating exe. : pyinstaller main.py  --onefile --noconsole in Local Terminal
+<br />      Will need to install pyinstaller (only when creating exe.)
+<br />      Process:  https://chat.openai.com/share/837969f0-6921-43fb-b280-05acc8bd1918
 <br />   
 <br />   
 <br />   
