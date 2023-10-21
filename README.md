@@ -41,8 +41,7 @@ Tools and Resources
 <br />                ENTER (select)
 <br />                ESC (current menu such as Menu screen, end screen, level screen)
 <br />                SPACE (drop bomb, 1 bomb per second)
-<br />                *There is no mouse click involved
-<br />
+<br />                
 <br />
 ChangeLogs
 <br />Version 1.0: 
@@ -77,14 +76,10 @@ ChangeLogs
 <br />      Note: With just near 500 lines code on version 1.3, using ChatGPT is difficult
 <br />      Will need backup because game will not work especially when requesting 
 <br />      multiple changes at the same time.
-<br />Version 1.4: (future)
+<br />Version 1.4: 
 <br />      Button clicking is reponsive, in pace, and no flicking screen
-<br />      Fixed option screen default skin image
-<br />      Fixed player skin change not showing in level
-<br />      Added theme menu image, background image, end image   
-<br />      Enemy will no longer go through the wall and screen boundary
+<br />      Added theme menu image  
 <br />      End Menu [Retry] and [Menu] buttons added with appropriate function
-<br />      Now able to click ESC during each level, showing pause screen with [Retry] and [Menu] buttons
 <br />      Fixed end game screen screen flickers when any button is selected 
 <br />      Process:
 <br />   
