@@ -80,7 +80,7 @@ ChangeLogs
 <br />      Note: With just near 500 lines code on version 1.3, using ChatGPT is difficult
 <br />      Will need backup because game will not work especially when requesting 
 <br />      multiple changes at the same time.
-<br />Version 1.4: 
+<br />Version 1.4 final: 
 <br />      Button clicking is reponsive, in pace, and no flicking screen
 <br />      Added theme menu image  
 <br />      End Menu [Retry] and [Menu] buttons added with appropriate function
@@ -89,7 +89,7 @@ ChangeLogs
 <br />      Keyword for creating exe. : pyinstaller main.py  --onefile --noconsole in Local Terminal
 <br />      Will need to install pyinstaller (only when creating exe.)
 <br />      Process:  https://chat.openai.com/share/837969f0-6921-43fb-b280-05acc8bd1918
-<br />   
+<br />
 <br />   
 <br />   
 <br />   
