@@ -1,4 +1,4 @@
-<br />
+<br />//Created from ChatGPT
 <br />Bomberman is a classic video game franchise that was first introduced by Hudson Soft (now
 <br />part of Konami) in the 1980s. The game series is known for its action-packed gameplay and 
 <br />maze-like levels where players control a character who must strategically place bombs to 
@@ -22,7 +22,7 @@
 <br />Bomberman has also made appearances in various crossover games and has a strong 
 <br />presence in the gaming community. It remains a favorite among gamers for its classic, 
 <br />addictive gameplay and has contributed significantly to the history of video games.
-<br />
+<br />//Created from ChatGPT
 <br />
 <br />
 <br /> Tools and Resources
