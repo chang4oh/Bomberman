@@ -1,3 +1,4 @@
+import asyncio
 import pygame
 import sys
 import random
