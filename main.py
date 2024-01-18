@@ -1,3 +1,4 @@
+import asyncio
 import threading
 import pygame
 import sys
@@ -6,7 +7,7 @@ from assets import load_assets
 from menu import Menu
 from levels import create_level, update_bombs
 from entities import player, enemies, walls, player_bombs, update_enemies, handle_player_input, handle_game_over_screen
-from async_tasks import start_asyncio_loop
+# from async_tasks import start_asyncio_loop
 
 # Initialize Pygame and load assets
 pygame.init()
@@ -14,61 +15,66 @@ pygame.mixer.init()
 assets = load_assets()
 font = pygame.font.Font(None, 36)  # Create a font object for the menu
 
-
-# Main game loop
-def main():
+async def main():
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption("Bomberman Game")
 
-    menu_items = ["Start Game", "Options", "Credits", "Quit Game"]  # Define menu items
-    menu = Menu(font, menu_items)  # Pass font and items to Menu
+    # Define menu items
+    menu_items = ["Start Game", "Options", "Credits", "Quit Game"]
+    menu = Menu(font, menu_items)
 
-    current_level = 1
+    # Initialize variables
     in_menu = True
+    game_over = False
+    retry_selected = True
+    current_level = 1
     game_started = False
     game_elements_visible = False
-    current_level = 1
     can_drop_bomb = True
-    last_frame_time = pygame.time.get_ticks()
-    retry_selected = True
-    game_over = False  # Initialize the game_over variable here
 
     while True:
+        # Event handling
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
 
-        if in_menu:
-            menu.handle_event(event)
-            if menu.selected_item == 0 and event.type == pygame.KEYDOWN and event.key == pygame.K_RETURN:
-                game_started = True
-                in_menu = False
-                game_elements_visible = True
-                current_level = 1
-                create_level(current_level, enemies, walls, assets)
+            if in_menu:
+                # Handle menu navigation
+                selected_option = menu.handle_event(event)
+                if selected_option == "Start Game":
+                    in_menu = False
+                    game_started = True
+                    game_elements_visible = True
+                    create_level(current_level, enemies, walls, assets)
+                # Add logic for other menu options (Options, Credits, Quit)
 
         if game_elements_visible:
+            # Game logic and drawing
             update_bombs(player_bombs, assets)
-            screen.fill(BACKGROUND_COLOR)
             update_enemies(enemies, assets)
             handle_player_input(player, assets)
-
-            # Render game elements
+            screen.fill(BACKGROUND_COLOR)
+            # Drawing game elements
             for wall in walls:
                 screen.blit(assets['wall_image'], (wall.x, wall.y))
             for enemy in enemies:
                 screen.blit(assets['enemy_image'], (enemy.x, enemy.y))
             screen.blit(assets['player_image'], (player.x, player.y))
 
-            pygame.display.update()
+        elif in_menu:
+            # Drawing the menu
+            screen.fill(BACKGROUND_COLOR)
+            menu.draw(screen)
 
-        if game_over and not menu.visible:
+        elif game_over:
+            # Handle game over logic
             handle_game_over_screen(screen, assets, retry_selected)
 
-if __name__ == "__main__":
-    # Start the asyncio loop in a separate thread
-    asyncio_thread = threading.Thread(target=start_asyncio_loop, daemon=True)
-    asyncio_thread.start()
+        # Update the display
+        pygame.display.update()
 
-    main()
+    await asyncio.sleep(0)
+    if not running:
+        pygame.quit()
+        return
