@@ -1,3 +1,4 @@
+import threading
 import pygame
 import sys
 from settings import WIDTH, HEIGHT, BACKGROUND_COLOR
@@ -11,13 +12,17 @@ from async_tasks import start_asyncio_loop
 pygame.init()
 pygame.mixer.init()
 assets = load_assets()
+font = pygame.font.Font(None, 36)  # Create a font object for the menu
+
 
 # Main game loop
 def main():
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption("Bomberman Game")
 
-    menu = Menu(assets)
+    menu_items = ["Start Game", "Options", "Credits", "Quit Game"]  # Define menu items
+    menu = Menu(font, menu_items)  # Pass font and items to Menu
+
     current_level = 1
     in_menu = True
     game_started = False
@@ -26,6 +31,7 @@ def main():
     can_drop_bomb = True
     last_frame_time = pygame.time.get_ticks()
     retry_selected = True
+    game_over = False  # Initialize the game_over variable here
 
     while True:
         for event in pygame.event.get():
@@ -34,7 +40,7 @@ def main():
                 sys.exit()
 
         if in_menu:
-            menu.handle_event(event, screen)
+            menu.handle_event(event)
             if menu.selected_item == 0 and event.type == pygame.KEYDOWN and event.key == pygame.K_RETURN:
                 game_started = True
                 in_menu = False
