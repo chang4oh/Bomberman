@@ -32,7 +32,7 @@ background_music = pygame.mixer.Sound("background_music.ogg")
 background_music.play(-1)  # Loop the background music indefinitely
 
 # Load explosion sound
-explosion_sound = pygame.mixer.Sound("explosion.wav")  # Replace with your sound file's path
+explosion_sound = pygame.mixer.Sound("explosion.ogg")  # Replace with your sound file's path
 
 # Load explosion images
 explosion_images = [pygame.image.load("explosion_frame1.png"),
@@ -299,20 +299,6 @@ class Menu:
             screen.blit(player_skin_image, (WIDTH // 2 + 20, HEIGHT // 2 - len(option_items) * 20 + 80))
 
             pygame.display.flip()
-
-# Example asynchronous function
-async def async_task():
-    while True:
-        print("Performing an asynchronous task...")
-        await asyncio.sleep(1)  # Sleep for 1 second
-
-# Function to run the asyncio event loop
-def start_asyncio_loop():
-    asyncio.run(async_task())
-
-# Start the asyncio loop in a separate thread
-asyncio_thread = threading.Thread(target=start_asyncio_loop, daemon=True)
-asyncio_thread.start()
 
 
 
