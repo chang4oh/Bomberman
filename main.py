@@ -1,3 +1,4 @@
+import threading
 import asyncio
 import pygame
 import sys
@@ -298,6 +299,24 @@ class Menu:
             screen.blit(player_skin_image, (WIDTH // 2 + 20, HEIGHT // 2 - len(option_items) * 20 + 80))
 
             pygame.display.flip()
+
+# Example asynchronous function
+async def async_task():
+    while True:
+        print("Performing an asynchronous task...")
+        await asyncio.sleep(1)  # Sleep for 1 second
+
+# Function to run the asyncio event loop
+def start_asyncio_loop():
+    asyncio.run(async_task())
+
+# Start the asyncio loop in a separate thread
+asyncio_thread = threading.Thread(target=start_asyncio_loop, daemon=True)
+asyncio_thread.start()
+
+
+
+
 def resume_game():
     global game_over
     game_over = False
