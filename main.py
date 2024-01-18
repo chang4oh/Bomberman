@@ -25,10 +25,10 @@ wall_image = pygame.image.load("wall.png")
 bomb_image = pygame.image.load("bomb.png")
 
 # Load menu music
-menu_music = pygame.mixer.Sound("menu_music.mp3")  # Replace with your menu music file's path
+menu_music = pygame.mixer.Sound("menu_music.ogg")  # Replace with your menu music file's path
 
 # Load and play background music
-background_music = pygame.mixer.Sound("background_music.mp3")
+background_music = pygame.mixer.Sound("background_music.ogg")
 background_music.play(-1)  # Loop the background music indefinitely
 
 # Load explosion sound
