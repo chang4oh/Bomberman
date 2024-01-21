@@ -1,3 +1,4 @@
+#Bomberman
 <br />//Created from ChatGPT
 <br />Bomberman is a classic video game franchise that was first introduced by Hudson Soft (now
 <br />part of Konami) in the 1980s. The game series is known for its action-packed gameplay and 
@@ -46,8 +47,12 @@
 <br />                ESC (current menu such as Menu screen, end screen, level screen)
 <br />                SPACE (drop bomb, 1 bomb per second)
 <br />                
+<br />ChangeLogs
+<br />Version 2.0:
+<br />      Branch created in works of seperating files in organized manner
+<br />      In works of creating working .exe and .html version                
 <br />
-ChangeLogs
+<br />ChangeLogs
 <br />Version 1.0: 
 <br />      Bomb (Bomb sprite) explode and with short animation. 
 <br />      Player (Bomberman sprite) with control and screen follow the player . 
