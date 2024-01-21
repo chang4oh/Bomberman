@@ -1,57 +1,59 @@
-#Bomberman
-<br />//Created from ChatGPT
-<br />Bomberman is a classic video game franchise that was first introduced by Hudson Soft (now
-<br />part of Konami) in the 1980s. The game series is known for its action-packed gameplay and 
-<br />maze-like levels where players control a character who must strategically place bombs to 
-<br />defeat enemies and solve puzzles.
-<br />
-<br />The basic premise of the game involves a character named Bomberman, who navigates 
-<br />through grid-based levels, trying to eliminate enemies by strategically placing and 
-<br />detonating bombs while avoiding being caught in the blast radius of their own bombs. The 
-<br />game typically features both single-player and multiplayer modes, making it a popular 
-<br />choice for multiplayer gaming.
-<br />
-<br />Bomberman has seen numerous iterations and adaptations across various gaming 
-<br />platforms, including the NES, Super Nintendo, and modern consoles. It has become a 
-<br />beloved and enduring franchise in the gaming world and has been released in various forms, 
-<br />including 2D and 3D versions, as well as spin-off titles.
-<br />
-<br />The multiplayer aspect of Bomberman is particularly well-known, as it allows for exciting and 
-<br />competitive gameplay, with players trying to outwit and outmaneuver their opponents while 
-<br />avoiding the destructive power of the bombs.
-<br />
-<br />Bomberman has also made appearances in various crossover games and has a strong 
-<br />presence in the gaming community. It remains a favorite among gamers for its classic, 
-<br />addictive gameplay and has contributed significantly to the history of video games.
-<br />//Created from ChatGPT
-<br />
-<br />
-<br /> Tools and Resources
-<br />      PyCharm - Coding
-<br />      ChatGPT - Coding and guide
-<br />      iCon8 - Sprites
-<br />      Link:  https://icons8.com/icons/set/bomberman
-<br />      My Brain :  Making sure it's Bomberman game
-<br />      Music - Bomberman Music
-<br />      Link:  https://downloads.khinsider.com/game-soundtracks/album/bomberman-turbografx-16-1990
-<br />      Bomb Explosion Sound - 
-<br />      Link:  https://www.101soundboards.com/boards/44154-sound-effects-super-bomberman-2-miscellaneous-snes
-<br />
-<br />      TO PLAY, download dist (is the latest version)
-<br />      Click the main.exe and the software will automatically work
-<br />      Will need Python IDE downloaded
-<br />
-<br />      HOW TO PLAY:
-<br />      CONTROLS  Arrow keys (character movement, choice selection)
-<br />                ENTER (select)
-<br />                ESC (current menu such as Menu screen, end screen, level screen)
-<br />                SPACE (drop bomb, 1 bomb per second)
-<br />                
+# Bomberman
+Created from ChatGPT
+Bomberman is a classic video game franchise that was first introduced by Hudson Soft (now
+part of Konami) in the 1980s. The game series is known for its action-packed gameplay and 
+maze-like levels where players control a character who must strategically place bombs to 
+defeat enemies and solve puzzles.
+
+The basic premise of the game involves a character named Bomberman, who navigates 
+through grid-based levels, trying to eliminate enemies by strategically placing and 
+detonating bombs while avoiding being caught in the blast radius of their own bombs. The 
+game typically features both single-player and multiplayer modes, making it a popular 
+choice for multiplayer gaming.
+
+Bomberman has seen numerous iterations and adaptations across various gaming 
+platforms, including the NES, Super Nintendo, and modern consoles. It has become a 
+beloved and enduring franchise in the gaming world and has been released in various forms, 
+including 2D and 3D versions, as well as spin-off titles.
+
+The multiplayer aspect of Bomberman is particularly well-known, as it allows for exciting and 
+competitive gameplay, with players trying to outwit and outmaneuver their opponents while 
+avoiding the destructive power of the bombs.
+
+Bomberman has also made appearances in various crossover games and has a strong 
+presence in the gaming community. It remains a favorite among gamers for its classic, 
+addictive gameplay and has contributed significantly to the history of video games.
+//Created from ChatGPT
+
+
+### Tools and Resources
+      PyCharm - Coding
+      ChatGPT - Coding and guide
+      iCon8 - Sprites
+      Link:  https://icons8.com/icons/set/bomberman
+      My Brain :  Making sure it's Bomberman game
+      Music - Bomberman Music
+      Link:  https://downloads.khinsider.com/game-soundtracks/album/bomberman-turbografx-16-1990
+      Bomb Explosion Sound - 
+      Link:  https://www.101soundboards.com/boards/44154-sound-effects-super-bomberman-2-miscellaneous-snes
+
+      TO PLAY, download dist (is the latest version)
+      Click the main.exe and the software will automatically work
+      Will need Python IDE downloaded
+
+### HOW TO PLAY
+      CONTROLS  Arrow keys (character movement, choice selection)
+                ENTER (select)
+                ESC (current menu such as Menu screen, end screen, level screen)
+                SPACE (drop bomb, 1 bomb per second)
+                
+### Incase you have run into the problem and can't get it resolved
+*This is for interested developers and if you want to try the game,
+please check for .exe or .html to play instantly.
 This instruction is very very important! Or else you will go into
 loops of errors and will take many hours just to have the same error
 stuck forever.
 
-Incase you have run into the problem and can't get it resolved
 1. uninstall python
 2. uninstall ubuntu/linux (if used)
 
@@ -87,62 +89,53 @@ for tutorial videos.
 	*follow tutorial where to place asyncio to make it work
 	pygbag folder_name	// must do outside the folder_name
 	http://localhost:8000#debug	// HTML debug
-<br />ChangeLogs
-<br />Version 2.0:
-<br />      Branch created in works of seperating files in organized manner
-<br />      In works of creating working .exe and .html version                
-<br />
-<br />ChangeLogs
-<br />Version 1.0: 
-<br />      Bomb (Bomb sprite) explode and with short animation. 
-<br />      Player (Bomberman sprite) with control and screen follow the player . 
-<br />      Random Enemy spawn (Ghost sprite) with random movement. Player removed upon collision AKA lose game.
-<br />      Random Wall spawn (Wall sprite) with collision
-<br />      Process:  https://chat.openai.com/share/837969f0-6921-43fb-b280-05acc8bd1918
-<br />Version 1.1:
-<br />      Player now be able to drop one bomb at a time (not an easy task)
-<br />      Bomb will remove enemy after exploding in close proximity
-<br />      Process:  https://chat.openai.com/share/837969f0-6921-43fb-b280-05acc8bd1918
-<br />Version 1.2: 
-<br />      Game background music added
-<br />      Bomb explosion sound added
-<br />      Menu Screen added with four button (Start Game) (Options) (Credits) (Quit)
-<br />      Quit button function added
-<br />      Menu screen music added
-<br />      Start button function added
-<br />      Note: adding menu screen and connecting to start game is very difficult process
-<br />      Everything is rendered now, adjusted every objects (another difficult process)
-<br />      Start button function added
-<br />      Automatic leveling, and scoring 
-<br />      Process:  https://chat.openai.com/share/837969f0-6921-43fb-b280-05acc8bd1918
-<br />      Process:  https://chat.openai.com/share/6fa990e8-069e-4c92-b570-d19b361867e9
-<br />Version 1.3: 
-<br />      Credits button function added
-<br />      Options button funciton added (Music On/Off, Difficulty Normal/Hard, Change Skin)
-<br />      Multiple error fixes including screen transition between menu and buttons
-<br />      Process:  https://chat.openai.com/share/6fa990e8-069e-4c92-b570-d19b361867e9
-<br />      Process:  https://chat.openai.com/share/6fa990e8-069e-4c92-b570-d19b361867e9
-<br />      Note: With just near 500 lines code on version 1.3, using ChatGPT is difficult
-<br />      Will need backup because game will not work especially when requesting 
-<br />      multiple changes at the same time.
-<br />Version 1.4 final: 
-<br />      Button clicking is reponsive, in pace, and no flicking screen
-<br />      Added theme menu image  
-<br />      End Menu [Retry] and [Menu] buttons added with appropriate function
-<br />      Fixed end game screen screen flickers when any button is selected 
-<br />      *Added exe. file inside dist for easy access to game play
-<br />      Keyword for creating exe. : pyinstaller main.py  --onefile --noconsole in Local Terminal
-<br />      Will need to install pyinstaller (only when creating exe.)
-<br />      Process:  https://chat.openai.com/share/837969f0-6921-43fb-b280-05acc8bd1918
-<br />
-<br />   
-<br />   
-<br />   
-<br />   
-<br />   
-<br />   
-<br />   
-<br />   
+
+## ChangeLogs
+### Version 2.0
+      Branch created in works of seperating files in organized manner
+      In works of creating working .exe and .html version                
+### Version 1.4  
+      Button clicking is reponsive, in pace, and no flicking screen
+      Added theme menu image  
+      End Menu [Retry] and [Menu] buttons added with appropriate function
+      Fixed end game screen screen flickers when any button is selected 
+      *Added exe. file inside dist for easy access to game play
+      Keyword for creating exe. : pyinstaller main.py  --onefile --noconsole in Local Terminal
+      Will need to install pyinstaller (only when creating exe.)
+      Process:  https://chat.openai.com/share/837969f0-6921-43fb-b280-05acc8bd1918
+### Version 1.3 
+      Credits button function added
+      Options button funciton added (Music On/Off, Difficulty Normal/Hard, Change Skin)
+      Multiple error fixes including screen transition between menu and buttons
+      Process:  https://chat.openai.com/share/6fa990e8-069e-4c92-b570-d19b361867e9
+      Process:  https://chat.openai.com/share/6fa990e8-069e-4c92-b570-d19b361867e9
+      Note: With just near 500 lines code on version 1.3, using ChatGPT is difficult
+      Will need backup because game will not work especially when requesting 
+      multiple changes at the same time.
+### Version 1.2 
+      Game background music added
+      Bomb explosion sound added
+      Menu Screen added with four button (Start Game) (Options) (Credits) (Quit)
+      Quit button function added
+      Menu screen music added
+      Start button function added
+      Note: adding menu screen and connecting to start game is very difficult process
+      Everything is rendered now, adjusted every objects (another difficult process)
+      Start button function added
+      Automatic leveling, and scoring 
+      Process:  https://chat.openai.com/share/837969f0-6921-43fb-b280-05acc8bd1918
+      Process:  https://chat.openai.com/share/6fa990e8-069e-4c92-b570-d19b361867e9
+### Version 1.1
+      Player now be able to drop one bomb at a time (not an easy task)
+      Bomb will remove enemy after exploding in close proximity
+      Process:  https://chat.openai.com/share/837969f0-6921-43fb-b280-05acc8bd1918
+### Version 1.0 
+      Bomb (Bomb sprite) explode and with short animation. 
+      Player (Bomberman sprite) with control and screen follow the player . 
+      Random Enemy spawn (Ghost sprite) with random movement. Player removed upon collision AKA lose game.
+      Random Wall spawn (Wall sprite) with collision
+      Process:  https://chat.openai.com/share/837969f0-6921-43fb-b280-05acc8bd1918
+
 
 
 
