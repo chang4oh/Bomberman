@@ -25,6 +25,11 @@ presence in the gaming community. It remains a favorite among gamers for its cla
 addictive gameplay and has contributed significantly to the history of video games.
 //Created from ChatGPT
 
+### HOW TO PLAY
+      CONTROLS  Arrow keys (character movement, choice selection)
+                ENTER (select)
+                ESC (current menu such as Menu screen, end screen, level screen)
+                SPACE (drop bomb, 1 bomb per second)
 
 ### Tools and Resources
       PyCharm - Coding
@@ -40,16 +45,10 @@ addictive gameplay and has contributed significantly to the history of video gam
       TO PLAY, download dist (is the latest version)
       Click the main.exe and the software will automatically work
       Will need Python IDE downloaded
-
-### HOW TO PLAY
-      CONTROLS  Arrow keys (character movement, choice selection)
-                ENTER (select)
-                ESC (current menu such as Menu screen, end screen, level screen)
-                SPACE (drop bomb, 1 bomb per second)
                 
-### Incase you have run into the problem and can't get it resolved
-*This is for interested developers and if you want to try the game,
-please check for .exe or .html to play instantly.
+### Developer Use) Incase you have run into the problem and can't get it resolved
+**This is for interested developers and if you want to try the game,
+please check for .exe or .html to play instantly.**
 This instruction is very very important! Or else you will go into
 loops of errors and will take many hours just to have the same error
 stuck forever.
