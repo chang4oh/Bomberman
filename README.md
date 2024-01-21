@@ -47,6 +47,46 @@
 <br />                ESC (current menu such as Menu screen, end screen, level screen)
 <br />                SPACE (drop bomb, 1 bomb per second)
 <br />                
+This instruction is very very important! Or else you will go into
+loops of errors and will take many hours just to have the same error
+stuck forever.
+
+Incase you have run into the problem and can't get it resolved
+1. uninstall python
+2. uninstall ubuntu/linux (if used)
+
+*Basic settings on VSCode, Ubuntu, Bash, and JS are recommended to look
+for tutorial videos.
+
+*when there is warning on pathing issue, go to window, edit environment variable
+	double click PATH, copy&paste the location installed to PATH
+
+1. install VSCode
+2. install from official Python website
+	Make sure install python with PATH added
+	With checkmarks just about everything (look tutorial downloading)
+	Get it from official website
+3. install Ubuntu 22.0 on microsoft store
+	any LTE versions are good
+
+3. Open VSCode
+	open terminal using 'shift'+'`' keys
+	Bash: pip install pygame // pip install is equivalent to import in Ubuntu
+				// make sure right interpretor is selected or error will pop up
+
+4. Create an .exe file
+	Bash: pip install pipinstaller // app that makes into .exe
+	Bash: python -m PyInstaller myscript.py	// no depublicates; takes a while to install .exe
+	
+5. Create an HTML
+	asyncio based program used coroutine which is on top of single thread 
+	as compared to multithreading
+
+	Bash: pip install asyncio 
+	Bash: pip install pygbag
+	*follow tutorial where to place asyncio to make it work
+	pygbag folder_name	// must do outside the folder_name
+	http://localhost:8000#debug	// HTML debug
 <br />ChangeLogs
 <br />Version 2.0:
 <br />      Branch created in works of seperating files in organized manner
